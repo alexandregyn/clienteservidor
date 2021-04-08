@@ -9,8 +9,9 @@ public class Servidor {
 	public static void main(String[] args) {
 
 		try {	
+			// ServerSocket que define a porta que vai ficar aberta para comunicação com o servidor.
 			ServerSocket servidor = new ServerSocket(7000);
-			System.out.println("Servidor Iniciado....");
+			System.out.println("Servidor Iniciado...");
 			
 			while (true) {
 				AtendeCliente atendeCliente = new AtendeCliente(servidor.accept());
