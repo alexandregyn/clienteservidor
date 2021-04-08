@@ -10,7 +10,7 @@ public class Servidor {
 
 		try {	
 			ServerSocket servidor = new ServerSocket(7000);
-			System.out.println("Servidor Iniciado...");
+			System.out.println("Servidor Iniciado....");
 			
 			while (true) {
 				AtendeCliente atendeCliente = new AtendeCliente(servidor.accept());
