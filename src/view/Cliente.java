@@ -9,13 +9,12 @@ public class Cliente {
 
 	public static void main(String[] args) {
 		 
-		// IP Local 192.168.0.8
-		// IP Máquina Virtual 192.168.0.13
+		// IP Local 192.168.0.6
+		// IP Máquina Virtual Cliente 192.168.0.13
 		
 		try {
 			//Declarar o soket cliente
-//			Socket cliente = new Socket("192.168.0.13", 7000); // Ip servidor Maquina Linux.
-			Socket cliente = new Socket("192.168.0.6", 7000); // Ip Local Maquina Windows.
+			Socket cliente = new Socket("192.168.0.6", 7000);
 			System.out.println("Cliente Iniciado");
 			
 			// Cria um instancia de conexão com o banco de dados.
@@ -37,7 +36,7 @@ public class Cliente {
 					
 					// Salva no banco mensagem do cliente
 					String sql = "INSERT INTO CLISER (CS_ID, CS_NOME, CS_MENSAGEM)" +
-							"VALUES (DEFAULT, 'Cliente', '"+ mensagem +"')";
+							"VALUES (DEFAULT, 'Cliente 1', '"+ mensagem +"')";
 					conexao.executaSql(sql);
 					
 					String resposta = chegada.nextLine();
